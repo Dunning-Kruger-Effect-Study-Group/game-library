@@ -1,25 +1,21 @@
 import mongoose from 'mongoose';
-import { Schema } from 'mongoose';
-import { IGameData } from '@game-library/types';
+import { setGameSchema } from './game';
+import { setPlatformSchema } from './platform';
+import { setCompanySchema } from './company';
 
-// SCHEMAS
-export const gameSchema = new Schema<IGameData>(
-  {
-    coverArt: { type: String, required: false },
-    name: { type: String, required: true },
-    OS: { type: String, required: false },
-    releaseDate: { type: Date, required: false },
-  },
-  { autoIndex: false }
-);
+
 
 // SET MODELS IN CONNECTION
 export function setModels(conn: mongoose.Connection) {
-  conn.model(Models.Game, gameSchema);
+  conn.model(Models.Game, setGameSchema());
+  conn.model(Models.Company, setCompanySchema());
+  conn.model(Models.Platform, setPlatformSchema());
 }
 
 // MODELS ENUM
 export const Models = {
   Game: 'game',
   User: 'user',
+  Platform: 'platform',
+  Company: 'company',
 };

@@ -3,6 +3,7 @@ import cors = require('cors');
 import { initRoutes } from './router/router';
 import { logger } from './util/logger';
 import { ConnectToDB } from './db/connection';
+import { errorHandler } from './util/errorHandler';
 
 function init() {
   // INITIAL APP CONFIG
@@ -13,6 +14,7 @@ function init() {
 
   // Middlewares
   app.use(cors());
+  app.use(express.json({}))
   logger(app);
 
   // Mongoose
@@ -20,6 +22,9 @@ function init() {
 
   // Routes
   initRoutes(app);
+
+  // Error handler
+  errorHandler(app)
 
   app.listen(port, () => {
     console.log(`App listening on port ${port}`);

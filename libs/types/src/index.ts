@@ -1,1 +1,3 @@
-export * from './lib/gameData';
+export * from './lib/company';
+export * from './lib/game';
+export * from './lib/platform';
