@@ -1,0 +1,35 @@
+{
+  "name": "mongodb",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/mongodb/",
+  "projectType": "application",
+  "targets": {
+    "up": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "./apps/mongodb/",
+        "commands": [
+          "docker compose up -d"
+        ],
+        "parallel": false
+      }
+    },
+    "down": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "./apps/mongodb/",
+        "commands": ["docker compose down"],
+        "parallel": false
+      }
+    },
+    "clear": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "./apps/mongodb/",
+        "commands": ["docker volume rm mongodb_game_library"],
+        "parallel": false
+      }
+    }
+  },
+  "tags": []
+}

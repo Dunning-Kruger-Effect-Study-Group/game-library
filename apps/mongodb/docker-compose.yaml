@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  game_library_db:
+    image: mongo:latest
+    restart: always
+    ports:
+      - 27017:27017
+    env_file:
+      - ./.env
+    volumes:
+      - game_library:/data/db
+      - ./init:/docker-entrypoint-initdb.d
+
+volumes:
+  game_library:  
