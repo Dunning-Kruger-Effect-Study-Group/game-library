@@ -15,7 +15,9 @@ export const Overlay: FC = () => {
           <div className="ml-2">name</div>
           <button className="ml-auto mr-2">X</button>
         </div>
-        {}
+        {/* {asdw.pathname.includes("platform") &&
+            
+        } */}
         <CompanyForm />
       </div>
     </div>
