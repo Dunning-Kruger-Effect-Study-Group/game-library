@@ -16,6 +16,8 @@ export function setGameSchema(){
     {
       coverArt: { type: String, required: false },
       name: { type: String, required: true },
+      developer: {type:String, required:false},
+      publisher: {type:String, required:false},
       releases: [releaseSchema],
     },
     { autoIndex: false, versionKey: false, collection: Models.Game }

@@ -1,19 +1,18 @@
-import { ObjectId } from 'mongoose';
 import { IDocument } from './db';
 
-export interface IGameDataDoc extends IGameData,IDocument{}
+export interface IGameDataDoc extends IGameData, IDocument {}
 
 export interface IGameData {
   coverArt?: string;
   name: string;
-  developer?: ObjectId
-  publisher?: ObjectId
+  developer?: string;
+  publisher?: string;
   releases: Array<IGameRelease>;
 }
 
 export interface IGameRelease {
   releaseDate: Date;
-  platform: ObjectId;
+  platform: string;
 }
 
 export interface IGameQuery {

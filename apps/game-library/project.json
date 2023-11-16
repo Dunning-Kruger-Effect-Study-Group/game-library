@@ -72,12 +72,6 @@
         "lintFilePatterns": ["apps/game-library/**/*.{ts,tsx,js,jsx}"]
       }
     },
-    "serve-static": {
-      "executor": "@nx/web:file-server",
-      "options": {
-        "buildTarget": "game-library:build"
-      }
-    },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],

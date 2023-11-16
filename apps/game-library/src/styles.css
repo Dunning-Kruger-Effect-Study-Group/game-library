@@ -5,5 +5,10 @@
 
 html,body,div#root {
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     width: 100vw;
+}
+footer{
+    margin-top: auto;
 }
