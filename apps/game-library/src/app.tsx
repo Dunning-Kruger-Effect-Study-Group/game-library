@@ -1,11 +1,11 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Base } from './features/ui/base';
 import { Games } from './pages/games';
 import Companies from './pages/companies';
 import Platforms from './pages/platforms';
 import { Provider } from 'react-redux';
-import store from './redux/store';
+import { store } from './redux/store';
 
 export function App() {
   return (
