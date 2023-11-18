@@ -17,6 +17,7 @@ Install:
 - [Docker](https://www.docker.com/products/docker-desktop/)
 - [Node 20.x](https://nodejs.org/en/download/)
 - [NX](#running-the-applications)
+- [Visual Studio Code](https://code.visualstudio.com/)
 
 Study:
 
@@ -49,3 +50,15 @@ Then run the apps using:
 ### Without global NX
 
 `npx nx <command name> <app name>`
+
+## Testing
+
+It is recommended that you install the [Jest extension for VSCode](vscode:extension/Orta.vscode-jest) and that while testing to turn on Jest coverage overlay to see what code needs tests to be written for it, to do so:
+
+Use this shortcut:
+
+`ctrl + shift + p`
+
+Then type and use:
+
+`Jest: Toggle Coverage`

@@ -1,42 +1,34 @@
 import { GetConnection } from '../db/connection';
 import { Models } from '../model/models';
-import {
-  IPlatform, IPlatformDoc,
-} from '@game-library/types';
+import { IPlatform, IPlatformDoc } from '@game-library/types';
 import { Document, Model } from 'mongoose';
+import { DuplicateError } from '../util/errorHandler';
 
-export async function CreatePlatform(Platform: IPlatform) {
+export async function CreatePlatform(data: IPlatform) {
   const db = GetConnection();
   const model: Model<IPlatform> = db.model(Models.Platform);
-  const document: Document = new model(Platform);
-  let result;
-  try {
-    result = await document.save();
-  } catch (error) {
-    result = error;
+  // Check for duplicate
+  const duplicate = await model.find({ name: data.name });
+  if (duplicate.length > 0) {
+    throw new DuplicateError();
   }
-  return result;
+  const document: Document = new model(data);
+  return await document.save();
 }
 
 export async function PlatformList() {
   const db = GetConnection();
   const model = db.model(Models.Platform);
-
-  try {
-    return await model.find();
-  } catch (error) {
-    return error;
-  }
+  return await model.find();
 }
 
-export async function UpdatePlatform(newData: IPlatformDoc) {
+export async function UpdatePlatform(data: IPlatformDoc) {
   const db = GetConnection();
   const model: Model<IPlatform> = db.model(Models.Platform);
-
-  // Update
-  try {
-    return await model.updateOne({ _id: newData._id }, newData);
-  } catch (error) {
-    return error;
+  // Check for duplicate
+  const duplicate = await model.find({ name: data.name });
+  if (duplicate.length > 0) {
+    throw new DuplicateError();
   }
+  return await model.updateOne({ _id: data._id }, data);
 }

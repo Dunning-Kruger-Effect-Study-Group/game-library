@@ -8,4 +8,5 @@ export default {
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   coverageDirectory: '../../coverage/apps/game-library',
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts']
 };
