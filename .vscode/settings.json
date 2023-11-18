@@ -1,0 +1,4 @@
+{
+    "jest.coverageFormatter": "DefaultFormatter",
+    "jest.autoRun": { "watch": true, "onSave": "test-file" },
+}
