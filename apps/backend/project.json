@@ -12,7 +12,7 @@
         "target": "node",
         "compiler": "tsc",
         "outputPath": "dist/apps/backend",
-        "main": "apps/backend/src/main.ts",
+        "main": "apps/backend/src/server.ts",
         "tsConfig": "apps/backend/tsconfig.app.json",
         "isolatedConfig": true,
         "webpackConfig": "apps/backend/webpack.config.js"
