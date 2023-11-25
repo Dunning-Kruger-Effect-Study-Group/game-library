@@ -1,8 +1,8 @@
 # Game Library
 
-This GitHub project is a game library and categorization software developed collaboratively by the [Dunning-Kruegger Effect study group](https://discord.gg/nWN8N9yh7x). Here's how it is structured and some features it has:
+This GitHub project is a game library and categorization software developed collaboratively by the [Dunning-Kruegger Effect study group](https://discord.gg/nWN8N9yh7x).
 
-# Repository Structure:
+# Repository Structure
 
 ## Monorepository 
 
