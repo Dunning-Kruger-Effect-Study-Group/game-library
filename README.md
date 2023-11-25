@@ -1,6 +1,52 @@
 # Game Library
 
-This is a mono repository containing both parts of a complete full stack aplication, using the following technologies:
+This GitHub project is a game library and categorization software developed collaboratively by the [Dunning-Kruegger Effect study group](https://discord.gg/nWN8N9yh7x). Here's how it is structured and some features it has:
+
+# Repository Structure:
+
+## Monorepository 
+
+As the name sugests, a [mono repository](https://en.wikipedia.org/wiki/Monorepo) (or monorepo) is a code repository which contains multiple projects inside of it, this helps reduce code duplication and allows for eaiser maintenance.
+
+We use [NX](https://nx.dev/) to manage this, it has tools for building, testing, linting, creating new apps and it configures everything for us without us lifting a finger, it handle the build process for typescript and webpack, it has a smart CI technology that detects the effect of the changes that each branch has and run the appropriate tests for those changes.
+
+Inside NX we have 3 applications:
+it contains three apps in it:
+
+- [game-library](/apps/game-library/README.md)
+- [backend](/apps/backend/README.md)
+- [mongodb](/apps/mongodb/README.md)
+
+### Frontend (React):
+
+Contains the user interface for browsing games, categorizing them, and managing the library.
+Utilizes React components for a responsive and interactive UI.
+Uses state management tools like Redux for managing application state.
+
+### Backend (Node.js and Express):
+
+Provides RESTful APIs for handling requests from the frontend.
+Manages authentication, game data storage, and retrieval.
+Utilizes Express middleware for routing and validation.
+
+### Database (MongoDB):
+
+Stores game information, user data, and categorization details. The NX app contains instructions to launch and configure the database using Docker.
+
+Utilizes MongoDB's flexibility for storing game metadata like title, genre, release date, description, images, etc.
+
+Provides fast querying capabilities for retrieving specific game information.
+
+## Collaboration Workflow:
+Branching Strategy: Utilizes Git branches for different features or fixes, following a branching model like Gitflow for better collaboration.
+
+Pull Requests and Code Reviews: Team members create pull requests for proposed changes, allowing others to review code before merging.
+
+Issue Tracking: We use GitHub issues to track bugs, feature requests, and enhancements.
+
+Continuous Integration/Continuous Deployment (CI/CD): Implements CI/CD pipelines to automate testing and deployment processes.
+
+## Tech Stack
 
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [TypeScript](https://www.typescriptlang.org/)
@@ -16,20 +62,7 @@ Install:
 
 - [Docker](https://www.docker.com/products/docker-desktop/)
 - [Node 20.x](https://nodejs.org/en/download/)
-- [NX](#running-the-applications)
 - [Visual Studio Code](https://code.visualstudio.com/)
-
-Study:
-
-- [JavaScript](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/)
-
-## Apps
-
-For managing the monorepository it uses [NX](https://nx.dev), it contains three apps in it:
-
-- [game-library](/apps/game-library/README.md)
-- [backend](/apps/backend/README.md)
-- [mongodb](/apps/mongodb/README.md)
 
 ## Running the applications 
 
