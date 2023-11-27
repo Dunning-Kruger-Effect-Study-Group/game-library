@@ -5,7 +5,7 @@ export const Header: FC = () => {
   return (
     <header className="flex flex-row p-4 items-center justify-around relative top-0 bg-Midnight_Blue text-Baby_Blue h-28 w-full">
       <Link
-        to={'/games'}
+        to={'/'}
         className="p-4 bg-Dark_Blue hover:bg-Blue_Gray active:bg-Dark_Blue"
       >
         Games
