@@ -13,7 +13,7 @@ export function App() {
       <Provider store={store}>
         <Routes>
           <Route path="/" element={<Base />}>
-            <Route index path='/games' element={<Games />} />
+            <Route index path="/" element={<Games />} />
             <Route path="/platforms" element={<Platforms />} />
             <Route path="/companies" element={<Companies />} />
             {/* <Route path="*" element={<NoPage />} /> */}
