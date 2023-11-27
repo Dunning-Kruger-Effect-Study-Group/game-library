@@ -1,9 +1,9 @@
-import { createSlice, configureStore } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 import { RootState } from '../../store';
 
 // Define a type for the slice state
 export interface OverlaySlice {
-    showOverlay: boolean;
+  showOverlay: boolean;
 }
 
 // Define the initial state using that type

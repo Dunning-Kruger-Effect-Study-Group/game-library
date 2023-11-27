@@ -1,4 +1,4 @@
-import { ICompany, IGameData } from '@game-library/types';
+import { ICompany } from '@game-library/types';
 import { CompanyCard } from '../features/collection/companyCard';
 import { useAppDispatch } from '../redux/hooks';
 import { show } from '../redux/slices/ui/overlaySlice';
@@ -17,7 +17,12 @@ function Companies() {
   return (
     <div className="flex flex-col">
       <div className="bg-Dark_Blue  mt-1">
-        <button onClick={(e)=>{dispatch(show())}} className="p-4 hover:bg-Baby_Blue hover:text-Dark_Blue">
+        <button
+          onClick={(e) => {
+            dispatch(show());
+          }}
+          className="p-4 hover:bg-Baby_Blue hover:text-Dark_Blue"
+        >
           New
         </button>
       </div>

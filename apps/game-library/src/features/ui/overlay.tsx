@@ -1,7 +1,6 @@
-import { FC, useEffect, useState } from 'react';
+import { FC, useEffect } from 'react';
 import { CompanyForm } from '../form/companyForm';
 import { useLocation } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
 import { useAppDispatch, useAppSelector } from '../../redux/hooks';
 import { hide } from '../../redux/slices/ui/overlaySlice';
 
@@ -27,7 +26,14 @@ export const Overlay: FC = () => {
       <div className="bg-Blue_Gray min-h-[50vh] min-w-[50vw]">
         <div className="flex items-center w-full h-8 bg-Dark_Blue">
           <div className="ml-2">name</div>
-          <button onClick={(e)=>{dispatch(hide())}} className="ml-auto mr-2">X</button>
+          <button
+            onClick={(e) => {
+              dispatch(hide());
+            }}
+            className="ml-auto mr-2"
+          >
+            X
+          </button>
         </div>
         {/* {asdw.pathname.includes("platform") &&
             

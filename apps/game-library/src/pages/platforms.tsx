@@ -5,13 +5,13 @@ function Home() {
   const arr: Array<IPlatform> = [
     {
       name: 'Windows 98',
-      logo:"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Microsoft_Windows_98_logo_with_wordmark.svg/800px-Microsoft_Windows_98_logo_with_wordmark.svg.png",
-      releases:[
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Microsoft_Windows_98_logo_with_wordmark.svg/800px-Microsoft_Windows_98_logo_with_wordmark.svg.png',
+      releases: [
         {
-          country:'asdw',
-          releaseDate: new Date("01/01/1998"),
-        }
-      ]
+          country: 'asdw',
+          releaseDate: new Date('01/01/1998'),
+        },
+      ],
     },
   ];
 
